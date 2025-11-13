@@ -1,4 +1,4 @@
-import { companiesData } from '../data/data';
+import { companiesData } from '../data/JobData';
 
 function HiringLinks({ onCompanyClick }) {
   return (

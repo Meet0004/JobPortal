@@ -1,4 +1,4 @@
-import { resourcesData } from '../data/data';
+import { resourcesData } from '../data/ResourceData';
 
 function Resources() {
   return (
