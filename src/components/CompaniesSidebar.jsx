@@ -3,7 +3,7 @@ import { ArrowRight02Icon } from 'hugeicons-react';
 
 function CompaniesSidebar({ onCompanyClick, companiesData }) {
   // Show only first 4 companies
-  const displayCompanies = companiesData.slice(0, 4);
+  const displayCompanies = companiesData.slice(0, 2);
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
