@@ -1,4 +1,3 @@
-// ============= Sidebar.jsx (Main Combined Component) =============
 import ResourcesSidebar from './ResourcesSidebar';
 import CompaniesSidebar from './CompaniesSidebar';
 

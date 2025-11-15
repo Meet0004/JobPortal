@@ -1,4 +1,3 @@
-// ============= Updated CompanyDetails.jsx =============
 import Sidebar from './Sidebar';
 import { companiesData } from '../data/JobData';
 
