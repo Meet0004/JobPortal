@@ -1,10 +1,18 @@
-function CompanyDetails({ company, onBack }) {
+import { useNavigate } from "react-router-dom";
+
+function CompanyDetails({ company }) {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/"); // go to homepage
+  };
+
   if (!company) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Company Not Found</h2>
-          <button onClick={onBack} className="text-orange-600 hover:underline">
+          <button onClick={handleBack} className="text-orange-600 hover:underline">
             ← Back to Home
           </button>
         </div>
@@ -15,7 +23,7 @@ function CompanyDetails({ company, onBack }) {
   return (
     <>
       <button
-        onClick={onBack}
+        onClick={handleBack}
         className="text-orange-600 hover:underline mb-4 inline-flex items-center"
       >
         ← Back to Home
@@ -39,11 +47,16 @@ function CompanyDetails({ company, onBack }) {
 
         <div className="border-t mt-8 pt-6">
           <h3 className="text-xl font-semibold text-gray-800 mb-3 my-3">Job Description</h3>
-          <ul className="list-disc list-inside space-y-4 text-gray-600" style={{ whiteSpace: "pre-line" }}>
+          <ul
+            className="list-disc list-inside space-y-4 text-gray-600"
+            style={{ whiteSpace: "pre-line" }}
+          >
             {company.fulldescription}
           </ul>
 
-          <h3 className=" my-3text-xl font-semibold text-gray-800 mb-3 my-3">Interview Tips for {company.name}</h3>
+          <h3 className="text-xl font-semibold text-gray-800 mb-3 my-3">
+            Interview Tips for {company.name}
+          </h3>
           <ul className="list-disc list-inside space-y-0 text-gray-600">
             <li>Research {company.name}'s culture and values</li>
             <li>Prepare for technical and behavioral questions</li>

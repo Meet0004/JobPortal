@@ -44,7 +44,7 @@ function HomePage({ onCompanyClick }) {
               }}
             />
           </button>
-          <style jsx>{`
+          <style>{`
           
             @keyframes bounce-horizontal {
               0%, 100% {

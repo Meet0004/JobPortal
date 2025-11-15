@@ -1,35 +1,53 @@
-import { useState } from 'react';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
-import CompanyDetails from './components/CompanyDetails';
+import { Routes, Route, useNavigate, useParams } from "react-router-dom";
+import Header from "./components/Header";
+import HomePage from "./components/HomePage";
+import CompanyDetails from "./components/CompanyDetails";
+import { companiesData } from "./data/JobData";
 
-function App() {
-  const [currentView, setCurrentView] = useState('home');
-  const [selectedCompany, setSelectedCompany] = useState(null);
+function CompanyDetailsWrapper() {
+  const { id, company, role } = useParams();
+
+  // find company by id
+  const selected = companiesData.find(
+    (item) =>
+      item.id.toString() === id &&
+      item.name.toLowerCase() === company.toLowerCase() &&
+      item.role.toLowerCase().replace(/\s+/g, "-") === role.toLowerCase()
+  );
+
+  return <CompanyDetails company={selected} />;
+}
+
+export default function App() {
+  const navigate = useNavigate();
 
   const handleCompanyClick = (company) => {
-    setSelectedCompany(company);
-    setCurrentView('companyDetails');
-  };
+    const url =
+      `/${company.id}/${company.name.toLowerCase()}/` +
+      `${company.role.toLowerCase().replace(/\s+/g, "-")}`;
 
-  const handleBackToHome = () => {
-    setSelectedCompany(null);
-    setCurrentView('home');
+    navigate(url);
   };
 
   return (
-    <div className="h-4 bg-gradient-to-br from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       <Header />
-      
+
       <main className="container mx-auto px-4 py-8">
-        {currentView === 'home' ? (
-          <HomePage onCompanyClick={handleCompanyClick} />
-        ) : (
-          <CompanyDetails company={selectedCompany} onBack={handleBackToHome} />
-        )}
+        <Routes>
+          {/* Home */}
+          <Route
+            path="/"
+            element={<HomePage onCompanyClick={handleCompanyClick} />}
+          />
+
+          {/* Details Page */}
+          <Route
+            path="/:id/:company/:role"
+            element={<CompanyDetailsWrapper />}
+          />
+        </Routes>
       </main>
     </div>
   );
 }
-
-export default App;
