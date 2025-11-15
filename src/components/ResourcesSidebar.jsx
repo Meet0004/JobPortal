@@ -1,5 +1,5 @@
 import { ArrowRight02Icon } from 'hugeicons-react';
-import { resourcesData } from '../data/resourceDataPromo';
+import { resourcesData } from '../data/ResourceDataPromo';
 function ResourcesSidebar() {
   const resources = resourcesData;
 
