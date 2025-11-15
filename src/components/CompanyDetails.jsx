@@ -19,12 +19,12 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
     <>
       <button
         onClick={onBack}
-        className="text-orange-600 hover:underline mb-4 ml-28 inline-flex items-center"
+        className="text-orange-600 hover:underline mb-4 md:ml-28 inline-flex items-center"
       >
         ← Back to Home
       </button>
 
-      <div className="flex gap-6 justify-center mb-10">
+      <div className="flex flex-col lg:flex-row gap-6 justify-center mb-10">
         {/* Main Content */}
         <div className="flex-1 max-w-3xl bg-white rounded-lg shadow-md p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">{company.name}</h2>
@@ -64,8 +64,8 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <div className="w-80 flex-shrink-0">
+        {/* Sidebar - appears after main content on mobile, beside on desktop */}
+        <div className="w-full lg:w-80 flex-shrink-0 order-last">
           <Sidebar onCompanyClick={onCompanyClick} companiesData={companiesData} />
         </div>
       </div>
