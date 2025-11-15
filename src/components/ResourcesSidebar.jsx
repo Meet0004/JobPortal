@@ -1,11 +1,12 @@
 import { ArrowRight02Icon } from 'hugeicons-react';
-import { resourcesData } from '../data/ResourceDataPromo';
+import { resourcesData } from '../data/PromoData/ResourceDataPromo';
+import booksIcon from "../assets/svg/books.svg";
 function ResourcesSidebar() {
   const resources = resourcesData;
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
-      <h3 className="text-lg font-bold text-gray-800 mb-3">📚 Resources</h3>
+      <h3 className="text-lg font-bold text-gray-800 mb-3"><img src={booksIcon} className="inline w-7 h-7 mb-2" /> Resources</h3>
       <div className="space-y-2 max-h-[280px] overflow-y-auto pr-2 custom-scrollbar">
         {resources.map((resource) => (
           <a

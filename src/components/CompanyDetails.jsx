@@ -27,11 +27,16 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
       <div className="flex flex-col lg:flex-row gap-6 justify-center mb-10">
         {/* Main Content */}
         <div className="flex-1 max-w-3xl bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">{company.name}</h2>
+          <h2 className="text-3xl font-bold text-gray-800">{company.name}</h2>
           <p className="text-gray-600 mb-6">{company.description}</p>
 
-          <div className="border-t pt-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Apply Now</h3>
+
+
+          
+
+          <div className="border-t pb-8 border-b">
+            <div className="pt-6">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3 ml-1">Apply Now</h3>
             <a
               href={company.hiringLink}
               target="_blank"
@@ -41,8 +46,7 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
               Visit Career Page →
             </a>
           </div>
-
-          <div className="border-t mt-8 pt-6">
+        </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-3 my-3">Job Description</h3>
             <ul
               className="list-disc list-inside space-y-4 text-gray-600"
@@ -62,7 +66,7 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
               <li>Review your resume thoroughly</li>
             </ul>
           </div>
-        </div>
+          
 
         {/* Sidebar - appears after main content on mobile, beside on desktop */}
         <div className="w-full lg:w-80 flex-shrink-0 order-last">

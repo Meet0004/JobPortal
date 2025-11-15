@@ -1,12 +1,13 @@
 import { ArrowRight02Icon } from 'hugeicons-react';
-
+import { JobDataPromo } from '../data/PromoData/JobDataPromo';
+import buildingIcon from "../assets/svg/building.svg";
 function CompaniesSidebar({ onCompanyClick, companiesData }) {
   //first 4 companies
-  const displayCompanies = companiesData.slice(0, 2);
+  const displayCompanies = JobDataPromo.slice(0, 2);
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
-      <h3 className="text-lg font-bold text-gray-800 mb-3">🏢 Top Companies</h3>
+      <h3 className="text-lg font-bold text-gray-800 mb-3"><img src={buildingIcon} className="inline w-7 h-7 mb-2" /> Top Companies</h3>
       <div className="space-y-2">
         {displayCompanies.map((company) => (
           <div

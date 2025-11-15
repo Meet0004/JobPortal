@@ -1,12 +1,12 @@
-import sql from "../assets/sql.png";
-import sqlcheatsheets from "../assets/sql3.png";
-import oops from "../assets/oops.png";
-import dsa from "../assets/15com.png";
-import interview from "../assets/200interview.png";
-import m200 from "../assets/200mails.png";
-import m2000 from "../assets/2000emails.png";
-import oracle from "../assets/40oracle.png";
-import tips from "../assets/100resumetips.png";
+import sql from "../../assets/sql.png";
+import sqlcheatsheets from "../../assets/sql3.png";
+import oops from "../../assets/oops.png";
+import dsa from "../../assets/15com.png";
+import interview from "../../assets/200interview.png";
+import m200 from "../../assets/200mails.png";
+import m2000 from "../../assets/2000emails.png";
+import oracle from "../../assets/40oracle.png";
+import tips from "../../assets/100resumetips.png";
 
 export const resourcesData = [
 	 {
