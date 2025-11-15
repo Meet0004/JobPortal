@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { resourcesData } from '../data/ResourceData';
 import { placeholderWords } from '../data/searchBarData';
-
+import booksIcon from "../assets/svg/books.svg";
 function Resources() {
   const [searchQuery, setSearchQuery] = useState('');
   const [placeholder, setPlaceholder] = useState('');
@@ -48,7 +48,7 @@ function Resources() {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-2xl font-semibold text-amber-600 mb-6 flex items-center">
-        <span className="mr-2">📚</span> Resources (Interview Tips and Complete Guide)
+        <img src={booksIcon} className="inline w-7 h-7" /> Resources (Interview Tips and Complete Guide)
       </h3>
 
       {/* Search Box */}

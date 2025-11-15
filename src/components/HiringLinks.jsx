@@ -1,5 +1,5 @@
 import { companiesData } from '../data/JobData';
-
+import buildingIcon from "../assets/svg/building.svg";
 function HiringLinks({ onCompanyClick }) {
   const handleViewDetails = (company) => {
     // Format the URL: /companyId/name/role
@@ -19,7 +19,7 @@ function HiringLinks({ onCompanyClick }) {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">🏢 Company Hiring Links</h2>
+        <h2 className="text-2xl font-bold text-gray-800"> <img src={buildingIcon} className="inline w-8 h-8 mb-2" /> Company Hiring Links</h2>
       </div>
       
       <div className="space-y-4">
