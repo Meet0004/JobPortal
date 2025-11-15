@@ -2,10 +2,38 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import CompanyDetails from './components/CompanyDetails';
+import { companiesData } from './data/JobData';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedCompany, setSelectedCompany] = useState(null);
+
+  // Load company from URL on initial mount
+  useEffect(() => {
+    const loadCompanyFromURL = () => {
+      const path = window.location.pathname;
+      const segments = path.split('/').filter(Boolean);
+      
+      // Check if URL matches pattern: /id/name/role
+      if (segments.length === 3) {
+        const companyId = segments[0];
+        
+        // Find company by ID
+        const company = companiesData.find(c => c.id === companyId || c.id === parseInt(companyId));
+        
+        if (company) {
+          setSelectedCompany(company);
+          setCurrentView('companyDetails');
+        } else {
+          // Company not found, redirect to home
+          window.history.replaceState({}, '', '/');
+          setCurrentView('home');
+        }
+      }
+    };
+
+    loadCompanyFromURL();
+  }, []); // Run only once on mount
 
   const handleCompanyClick = (company) => {
     setSelectedCompany(company);
@@ -31,6 +59,22 @@ function App() {
         setSelectedCompany(event.state.company);
         setCurrentView('companyDetails');
       } else {
+        // Try to load from URL if no state
+        const path = window.location.pathname;
+        const segments = path.split('/').filter(Boolean);
+        
+        if (segments.length === 3) {
+          const companyId = segments[0];
+          const company = companiesData.find(c => c.id === companyId || c.id === parseInt(companyId));
+          
+          if (company) {
+            setSelectedCompany(company);
+            setCurrentView('companyDetails');
+            return;
+          }
+        }
+        
+        // Otherwise go to home
         setSelectedCompany(null);
         setCurrentView('home');
       }
