@@ -1,8 +1,7 @@
-// ============= CompaniesSidebar.jsx =============
 import { ArrowRight02Icon } from 'hugeicons-react';
 
 function CompaniesSidebar({ onCompanyClick, companiesData }) {
-  // Show only first 4 companies
+  //first 4 companies
   const displayCompanies = companiesData.slice(0, 2);
 
   return (
