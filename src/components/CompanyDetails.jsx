@@ -20,7 +20,7 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
     <>
       <button
         onClick={onBack}
-        className="text-orange-600 hover:underline mb-4 ml-20 inline-flex items-center"
+        className="text-orange-600 hover:underline mb-4 ml-28 inline-flex items-center"
       >
         ← Back to Home
       </button>
