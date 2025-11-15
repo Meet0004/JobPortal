@@ -76,7 +76,7 @@ export const resourcesData = [
   },
   {
     id: 9,
-    title: "100+ Tips, Templates, Harvard Sample & Rules",
+    title: "100+ Resume Tips, Templates, Harvard Sample & Rules",
     description: "",
     price: "₹9",
     link: "https://topmate.io/meet_g/1809459",
