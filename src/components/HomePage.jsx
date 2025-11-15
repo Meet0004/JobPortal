@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HiringLinks from './HiringLinks';
 import Resources from './Resources';
+import { HandPointingLeft04Icon } from 'hugeicons-react';
 
 function HomePage({ onCompanyClick }) {
   const [activeTab, setActiveTab] = useState('hiring');
@@ -27,14 +28,33 @@ function HomePage({ onCompanyClick }) {
           </button>
           <button
             onClick={() => setActiveTab('resources')}
-            className={`px-6 py-3 rounded-md font-semibold transition-colors ${
+            className={`px-6 py-3 rounded-md font-semibold transition-colors flex items-center gap-2 ${
               activeTab === 'resources'
                 ? 'bg-amber-500 text-white'
                 : 'text-gray-600 hover:bg-gray-100'
             }`}
           >
             Resources
+            <HandPointingLeft04Icon
+              size={28}
+              className="animate-[bounce-horizontal_1s_ease-in-out_infinite]" 
+              style={{
+                marginLeft: '6px',
+                animation: 'bounce-horizontal 1s ease-in-out infinite',
+              }}
+            />
           </button>
+          <style jsx>{`
+          
+            @keyframes bounce-horizontal {
+              0%, 100% {
+                transform: translateX(0);
+              }
+              50% {
+                transform: translateX(-10px);
+              }
+            }
+          `}</style>
         </div>
       </div>
 

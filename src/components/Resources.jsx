@@ -1,8 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { resourcesData } from '../data/ResourceData';
+import { placeholderWords } from '../data/searchBarData';
 
 function Resources() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [placeholder, setPlaceholder] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  // Typing animation effect
+  useEffect(() => {
+    const currentWord = placeholderWords[wordIndex];
+    const typingSpeed = isDeleting ? 10 : 100;
+    const pauseTime = 300;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing mode
+        if (placeholder.length < currentWord.length) {
+          setPlaceholder(currentWord.slice(0, placeholder.length + 1));
+        } else {
+          // Pause before deleting
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        // Deleting mode
+        if (placeholder.length > 0) {
+          setPlaceholder(placeholder.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % placeholderWords.length);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [placeholder, isDeleting, wordIndex]);
 
   const filteredResources = resourcesData.filter(resource => {
     const query = searchQuery.toLowerCase();
@@ -23,7 +56,7 @@ function Resources() {
         <div className="relative">
           <input
             type="text"
-            placeholder="Search resources..."
+            placeholder={`${placeholder}`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-4 py-3 pl-11 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
