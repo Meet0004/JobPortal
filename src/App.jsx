@@ -1,53 +1,62 @@
-import { Routes, Route, useNavigate, useParams } from "react-router-dom";
-import Header from "./components/Header";
-import HomePage from "./components/HomePage";
-import CompanyDetails from "./components/CompanyDetails";
-import { companiesData } from "./data/JobData";
+import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import CompanyDetails from './components/CompanyDetails';
 
-function CompanyDetailsWrapper() {
-  const { id, company, role } = useParams();
-
-  // find company by id
-  const selected = companiesData.find(
-    (item) =>
-      item.id.toString() === id &&
-      item.name.toLowerCase() === company.toLowerCase() &&
-      item.role.toLowerCase().replace(/\s+/g, "-") === role.toLowerCase()
-  );
-
-  return <CompanyDetails company={selected} />;
-}
-
-export default function App() {
-  const navigate = useNavigate();
+function App() {
+  const [currentView, setCurrentView] = useState('home');
+  const [selectedCompany, setSelectedCompany] = useState(null);
 
   const handleCompanyClick = (company) => {
-    const url =
-      `/${company.id}/${company.name.toLowerCase()}/` +
-      `${company.role.toLowerCase().replace(/\s+/g, "-")}`;
+    setSelectedCompany(company);
+    setCurrentView('companyDetails');
 
-    navigate(url);
+    const formattedName = company.name.replace(/\s+/g, '-').toLowerCase();
+    const formattedRole = company.role.replace(/\s+/g, '-').toLowerCase();
+    const url = `/${company.id}/${formattedName}/${formattedRole}`;
+
+    window.history.pushState({ company }, '', url);
   };
+
+  const handleBackToHome = () => {
+    setSelectedCompany(null);
+    setCurrentView('home');
+    window.history.pushState({}, '', '/');
+  };
+
+  // Browser back & forward handling
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state && event.state.company) {
+        setSelectedCompany(event.state.company);
+        setCurrentView('companyDetails');
+      } else {
+        setSelectedCompany(null);
+        setCurrentView('home');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       <Header />
 
       <main className="container mx-auto px-4 py-8">
-        <Routes>
-          {/* Home */}
-          <Route
-            path="/"
-            element={<HomePage onCompanyClick={handleCompanyClick} />}
+        {currentView === 'home' ? (
+          <HomePage onCompanyClick={handleCompanyClick} />
+        ) : (
+          <CompanyDetails 
+            company={selectedCompany} 
+            onBack={handleBackToHome}
+            onCompanyClick={handleCompanyClick}
           />
-
-          {/* Details Page */}
-          <Route
-            path="/:id/:company/:role"
-            element={<CompanyDetailsWrapper />}
-          />
-        </Routes>
+        )}
       </main>
     </div>
   );
 }
+
+export default App;
