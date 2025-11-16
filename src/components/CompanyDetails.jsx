@@ -27,13 +27,9 @@ function CompanyDetails({ company, onBack, onCompanyClick }) {
       <div className="flex flex-col lg:flex-row gap-6 justify-center mb-10">
         {/* Main Content */}
         <div className="flex-1 max-w-3xl bg-white rounded-lg shadow-md p-8">
-          <h2 className="text-3xl font-bold text-gray-800">{company.name}</h2>
+          <h2 className="text-3xl font-bold text-gray-800">{company.name} </h2>
+          <h2 className="mt-2 text-2xl font-bold text-gray-800">Role: {company.role} </h2>
           <p className="text-gray-600 mb-6">{company.description}</p>
-
-
-
-          
-
           <div className="border-t pb-8 border-b">
             <div className="pt-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-3 ml-1">Apply Now</h3>
