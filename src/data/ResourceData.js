@@ -7,8 +7,16 @@ import m200 from "../assets/200mails.png";
 import m2000 from "../assets/2000emails.png";
 import oracle from "../assets/40oracle.png";
 import tips from "../assets/100resumetips.png";
+import coding from "../assets/basicCodingQues.png";
 
 export const resourcesData = [
+  {
+    id:0, title:"39 Basic Coding Ques + Code",
+    description:"",
+    price:"Free",
+    link:"https://topmate.io/meet_g/1812777",
+    image: coding
+  },
   {
     id: 2,
     title: "SQL Notes + Cheatsheets",
