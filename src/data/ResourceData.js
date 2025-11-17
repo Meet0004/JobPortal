@@ -8,6 +8,7 @@ import m2000 from "../assets/2000emails.png";
 import oracle from "../assets/40oracle.png";
 import tips from "../assets/100resumetips.png";
 import coding from "../assets/basicCodingQues.png";
+import js from "../assets/JScheatsheetExplain.png";
 
 export const resourcesData = [
   {
@@ -16,6 +17,21 @@ export const resourcesData = [
     price:"Free",
     link:"https://topmate.io/meet_g/1812777",
     image: coding
+  },
+  {
+    id:11, title:"Javascript cheatsheet (Arrays + Strings + DOM + Events)",
+    description:"",
+    price:"Free",
+    link:"https://topmate.io/meet_g/1812866",
+    image: js
+  },
+  {
+    id:10,
+    title: "50+ pages Detailed JavaScript Notes/Cheatsheet",
+    description: "",
+    price: "₹9",
+    link: "https://topmate.io/meet_g/1812754",
+    image: js
   },
   {
     id: 2,
