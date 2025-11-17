@@ -9,7 +9,7 @@ function HomePage({ onCompanyClick }) {
   return (
     <>
       <div className="text-center mb-4">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-2">Meet Soni</h2>
+        {/* <h2 className="text-4xl font-semibold text-gray-800 mb-2">Meet Soni</h2> */}
         <p className="text-gray-600">Your Career Guide & Interview Resource Hub</p>
       </div>
 
