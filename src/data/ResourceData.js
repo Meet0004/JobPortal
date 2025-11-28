@@ -17,22 +17,21 @@ export const resourcesData = [
     price:"Free",
     link:"https://topmate.io/meet_g/1812777",
     image: coding
-  },
-  {
-    id:11, title:"Javascript cheatsheet (Arrays + Strings + DOM + Events)",
+  },{
+    id:12, title:"Javascript cheatsheet (Arrays + Strings + DOM + Events)",
     description:"",
     price:"Free",
-    link:"https://topmate.io/meet_g/1812866",
+    link:"https://topmate.io/meet_g/1827280",
     image: js
   },
   {
-    id:10,
-    title: "50+ pages Detailed JavaScript Notes/Cheatsheet",
-    description: "",
-    price: "₹9",
-    link: "https://topmate.io/meet_g/1812754",
+    id:11, title:"40 Javascript Interview Questions + Detailed Answers",
+    description:"",
+    price:"₹9",
+    link:"https://topmate.io/meet_g/1827280",
     image: js
   },
+  
   {
     id: 2,
     title: "SQL Notes + Cheatsheets",
@@ -49,7 +48,14 @@ export const resourcesData = [
     link: "https://topmate.io/meet_g/1809053",
     image: sql
   },
-  
+  {
+    id:10,
+    title: "50+ pages Detailed JavaScript Notes/Cheatsheet",
+    description: "",
+    price: "₹9",
+    link: "https://topmate.io/meet_g/1812754",
+    image: js
+  },
   {
     id: 3,
     title: "Java OOPs Notes",
