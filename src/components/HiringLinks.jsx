@@ -22,7 +22,9 @@ function HiringLinks({ onCompanyClick }) {
   };
 
   // Filter companies based on search term
-  const filteredCompanies = companiesData.filter(company => {
+  const sortedCompanies = [...companiesData].sort((a, b) => b.id - a.id);
+  // Filter companies based on search term
+  const filteredCompanies = sortedCompanies.filter(company => {
     const searchLower = searchTerm.toLowerCase();
     return (
       company.name.toLowerCase().includes(searchLower) ||
