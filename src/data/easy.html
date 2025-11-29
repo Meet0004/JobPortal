@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Job Object Builder</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 24px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-size: 13px; color: #666; margin-bottom: 6px; font-weight: 500; }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .buttons { display: flex; gap: 10px; margin: 24px 0; }
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .btn-primary { background: #4f46e5; color: white; }
+    .btn-primary:hover { background: #4338ca; }
+    .btn-secondary { background: #f0f0f0; color: #333; }
+    .btn-secondary:hover { background: #e0e0e0; }
+    .btn-copy { background: #10b981; color: white; padding: 8px 12px; font-size: 13px; }
+    .btn-copy:hover { background: #059669; }
+    .output-section { margin-top: 24px; }
+    pre {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 16px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .next-id { font-size: 12px; color: #666; margin-bottom: 12px; }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .buttons { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Job Object Builder</h1>
+    
+    <div class="next-id">Next ID: <strong id="nextId">11</strong></div>
+
+    <form id="jobForm">
+      <div class="grid">
+        <div class="form-group">
+          <label for="name">Company Name</label>
+          <input id="name" type="text" value="" />
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input id="role" type="text" value="" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="hiringLink">Hiring Link</label>
+        <input id="hiringLink" type="url" value="" />
+      </div>
+
+      <div class="form-group">
+        <label for="shortdesc">Short Description</label>
+        <input id="shortdesc" type="text" />
+      </div>
+
+      <div class="form-group">
+        <label for="fulldesc"> </label>
+        <textarea id="fulldesc"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-primary">Generate</button>
+        <button type="button" id="resetBtn" class="btn-secondary">Reset Counter</button>
+        <button type="button" id="clearBtn" class="btn-secondary">Clear</button>
+      </div>
+    </form>
+
+    <div class="output-section">
+      <pre id="output">// Click Generate to produce the object</pre>
+      <div style="margin-top: 12px;">
+        <button id="copyBtn" class="btn-copy">Copy to Clipboard</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const LS_KEY = 'jobObjectNextId_v1';
+    const DEFAULT_START = 11;
+
+    function getNextId() {
+      const raw = localStorage.getItem(LS_KEY);
+      const n = parseInt(raw, 10);
+      if (!isFinite(n) || n < DEFAULT_START) {
+        localStorage.setItem(LS_KEY, String(DEFAULT_START));
+        return DEFAULT_START;
+      }
+      return n;
+    }
+
+    function incrementNextId() {
+      const n = getNextId();
+      localStorage.setItem(LS_KEY, String(n + 1));
+      updateDisplay();
+    }
+
+    function resetCounter() {
+      if (confirm('Reset next ID to 11?')) {
+        localStorage.setItem(LS_KEY, String(DEFAULT_START));
+        updateDisplay();
+      }
+    }
+
+    function updateDisplay() {
+      document.getElementById('nextId').textContent = getNextId();
+    }
+
+    function formatDescription(raw) {
+      const lines = raw.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
+      return lines.map(l => '▸ ' + l).join('\n');
+    }
+
+    function buildObject(id, name, role, link, shortdesc, fulldesc) {
+      const bt = '`';
+      const esc = s => String(s).replace(/"/g, '\\"');
+      const lines = [];
+      lines.push(', {');
+      lines.push('  id: ' + id + ',');
+      lines.push('  name: "' + esc(name) + '",');
+      lines.push('  role: "' + esc(role) + '",');
+      lines.push('  hiringLink: "' + esc(link) + '",');
+      lines.push('  shortdescription: "' + esc(shortdesc) + '",');
+      lines.push('  fulldescription:' + bt);
+      if (fulldesc.length > 0) lines.push(fulldesc);
+      lines.push(bt + '\n}');
+      return lines.join('\n');
+    }
+
+    updateDisplay();
+
+    document.getElementById('jobForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value || '';
+      const role = document.getElementById('role').value || '';
+      const link = document.getElementById('hiringLink').value || '';
+      const shortdesc = document.getElementById('shortdesc').value || '';
+      const fulldesc = formatDescription(document.getElementById('fulldesc').value || '');
+      const id = getNextId();
+      
+      document.getElementById('output').textContent = buildObject(id, name, role, link, shortdesc, fulldesc);
+      incrementNextId();
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const txt = document.getElementById('output').textContent;
+      if (!txt) {
+        alert('Nothing to copy. Generate first.');
+        return;
+      }
+      
+      const ta = document.createElement('textarea');
+      ta.value = txt;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      
+      try {
+        document.execCommand('copy');
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy to Clipboard', 1500);
+      } catch (err) {
+        alert('Failed to copy');
+      }
+      document.body.removeChild(ta);
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', resetCounter);
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      if (confirm('Clear all fields?')) {
+        document.getElementById('jobForm').reset();
+      }
+    });
+  </script>
+</body>
+</html>
