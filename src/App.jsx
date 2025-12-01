@@ -100,6 +100,7 @@ function App() {
           />
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
