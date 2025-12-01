@@ -210,7 +210,7 @@ Website Developers India is looking for Jr. Node.js Developer to join our dynami
 `
 }
 , {
-  id: 12,
+  id: 11,
   name: "Meesho",
   role: "Front-End Developer",
   hiringLink: "https://www.naukri.com/job-listings-front-end-developer-meesho-bengaluru-0-to-2-years-271125013614",
@@ -240,6 +240,61 @@ Implement necessary changes - and even re-write the entire product when needed
  Ability to produce bug-free and production-grade code
  Proficiency at debugging, including identifying page speed and performance bottlenecks, using tools like Chrome Dev tools, React Dev tools, etc.
  Working knowledge on frontend frameworks and tools – NodeJSand ReactJS expertise is a bonus
+`
+}, {
+  id: 13,
+  name: "Refold AI",
+  role: "Backend Engineer Intern",
+  hiringLink: "https://wellfound.com/jobs/3607637-backend-software-intern-remote",
+  shortdescription: "",
+  fulldescription:`
+As a Backend Software Intern at Cobalt, you will work closely with our experienced team of developers to design, develop and maintain robust and scalable backend applications using NodeJS and Typescript. You will gain hands-on experience in software development and be a part of a team that is passionate about creating innovative solutions.
+Design, develop and maintain backend applications using NodeJS and Typescript
+Collaborate with the team to ensure high-quality code and adherence to best practices
+Write clean, efficient and well-designed code
+Participate in code reviews to maintain code quality
+Troubleshoot and debug issues as they arise
+Work in an agile development environment and deliver high-quality code within tight deadlines
+Solid understanding of NodeJS and Typescript
+Knowledge of RESTful API design and implementation
+Experience with database technologies MongoDB
+Strong problem-solving and analytical skills
+Ability to work independently and as part of a team
+`
+}
+
+, {
+  id: 15,
+  name: "Website developers India",
+  role: "Jr.React js developer",
+  hiringLink: "https://www.wdipl.com/company/careers",
+  shortdescription: "Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.",
+  fulldescription:`Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.
+`
+}, {
+  id: 15,
+  name: "Website developers India",
+  role: "Jr.Flutter developer",
+  hiringLink: "https://www.wdipl.com/company/careers",
+  shortdescription: "Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS.",
+  fulldescription:`Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS..
+`
+}
+, {
+  id: 15,
+  name: "Website developers India",
+  role: "Jr.Node js developer",
+  hiringLink: "https://www.wdipl.com/company/careers",
+  shortdescription: "Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.",
+  fulldescription:`Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.
+`
+}, {
+  id: 15,
+  name: "Website developers India",
+  role: "Jr.Python developer",
+  hiringLink: "https://www.wdipl.com/company/careers",
+  shortdescription: "Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.",
+  fulldescription:`Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.
 `
 }
 ];
