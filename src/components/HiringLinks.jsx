@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { companiesData } from '../data/JobData';
 import buildingIcon from "../assets/svg/building.svg";
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 
 function HiringLinks({ onCompanyClick }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,7 +31,7 @@ function HiringLinks({ onCompanyClick }) {
       company.role.toLowerCase().includes(searchLower)
     );
   });
-
+  //<SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} /> // IMP PLEASE PUT IT DOWN
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="mb-6">
@@ -40,7 +40,7 @@ function HiringLinks({ onCompanyClick }) {
         </h2>
       </div>
       
-      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      
       
       {filteredCompanies.length === 0 ? (
         <div className="text-center py-12">
@@ -60,8 +60,8 @@ function HiringLinks({ onCompanyClick }) {
               onClick={() => handleViewDetails(company)}
               className="block p-4 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors border border-orange-200 cursor-pointer"
             >
-              <h3 className="text-lg font-semibold text-gray-900">{company.name}</h3>
-              <p className="text-sm text-orange-600 font-medium">{company.role}</p>
+              <h3 className="text-lg font-semibold text-gray-900">{company.role}</h3>
+              <p className="text-sm text-orange-600 font-medium">{company.name}</p>
               <p className="text-sm text-gray-600 mt-2">{company.shortdescription}</p>
               
               <button 

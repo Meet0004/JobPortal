@@ -84,9 +84,7 @@ Requirements:
 
 
   {
-	id: 5,
-	name: "Airbus", 
-	role: "Data Analyst Internship", 
+	id: 5,name: "Airbus", role: "Data Analyst Internship", 
 	hiringLink: "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0MzR3pEMkJOLWRmaUk4MklzUi1EaC1vZ0JHZ3xBQ3Jtc0tuWDV6ZmxrTUVYRk5tOTVFT1FmZExWWC1xSWlXOHk3RlZzZm5IeHdQYV9oaWZTdmk1X1JiaW5jYXlSQ1F6RUs0Z2ZUN0FJWmhvRUxwbUs2dDVLNmNQRnlZR2E0ZGlDTlE1UWZrZDBfZ0F2NDdfMzFtNA&q=https%3A%2F%2Funstop.com%2Finternships%2Fdata-analyst-internship-airbus-1594354%3Flb%3DSXegpLPz%26utm_medium%3DShare%26utm_source%3Dashishow22691%26utm_campaign%3DInternships&v=q5fXSjycohQ", 
 	shortdescription: "Undergraduate, Postgraduate, Engineering Students, Management, Arts, Commerce, Sciences & Others",
 	fulldescription:` 
@@ -110,9 +108,7 @@ Gsheet mastery
   },
 
 {
-  id: 6,
-  name: "Netomi", 
-  role: "Intern - Software Development (Java)", 
+  id: 6,name: "Netomi", role: "Intern - Software Development (Java)", 
   hiringLink: "https://jobs.lever.co/netomi/4c8803fe-b172-4523-8927-eb1ed50bb324", 
   shortdescription: "Product Engineering – Product Development /Intern /Remote",
   fulldescription:`Job Responsibilities
@@ -123,9 +119,7 @@ Gsheet mastery
 },
 
 {
-  id: 7,
-  name: "Izeon Innovative Technologies Pvt Ltd", 
-  role: "Data Analyst", 
+  id: 7,name: "Izeon Innovative Technologies Pvt Ltd", role: "Data Analyst", 
   hiringLink: "https://unstop.com/jobs/data-analyst-izeon-innovative-pvt-ltd-1594429?lb=SXegpLPz&utm_medium=Share&utm_source=ashishow22691&utm_campaign=Jobs", 
   shortdescription: "Bachelor’s Degree in Computer Science, Data Science, Statistics, Mathematics, or a related field.",
   fulldescription:`
@@ -152,9 +146,7 @@ Required Skills:
 
 
 {
-  id: 8,
-  name: "Autodesk", 
-  role: "Intern, Software Development Engineer", 
+  id: 8,name: "Autodesk", role: "Intern, Software Development Engineer", 
   hiringLink: "https://autodesk.wd1.myworkdayjobs.com/en-US/uni/job/Bengaluru-IND/Intern--Software-Development-Engineer--AEC---Construction-Engineering-_25WD91403", 
   shortdescription: "Bachelor’s Degree in Computer Science, Data Science, Statistics, Mathematics, or a related field.",
   fulldescription:`
@@ -176,9 +168,7 @@ Requirements:
 `
 },
 {
-  id: 9,
-  name: "Jr. Node.js Developer",
-  role: "Website developers India",
+  id: 9,name: "Jr. Node.js Developer",role: "Website developers India",
   hiringLink: "https://www.naukri.com/job-listings-jr-node-js-developer-website-developers-india-mumbai-0-to-3-years-241125502850",
   shortdescription: "",
   fulldescription:`
@@ -210,11 +200,7 @@ Website Developers India is looking for Jr. Node.js Developer to join our dynami
 `
 }
 , {
-  id: 11,
-  name: "Meesho",
-  role: "Front-End Developer",
-  hiringLink: "https://www.naukri.com/job-listings-front-end-developer-meesho-bengaluru-0-to-2-years-271125013614",
-  shortdescription: "",
+  id: 11,name: "Meesho",role: "Front-End Developer",hiringLink: "https://www.naukri.com/job-listings-front-end-developer-meesho-bengaluru-0-to-2-years-271125013614",shortdescription: "",
   fulldescription:`
 
 As our SDE- I (Frontend) you will help us create an amazing product experience for users by building responsive web design and web UX patterns. You will collaborate with other engineers to build delightful user experiences and understand customer pain points, resolving them. You will also ensure the consistency and quality of our product.
@@ -242,11 +228,7 @@ Implement necessary changes - and even re-write the entire product when needed
  Working knowledge on frontend frameworks and tools – NodeJSand ReactJS expertise is a bonus
 `
 }, {
-  id: 13,
-  name: "Refold AI",
-  role: "Backend Engineer Intern",
-  hiringLink: "https://wellfound.com/jobs/3607637-backend-software-intern-remote",
-  shortdescription: "",
+  id: 13, name: "Refold AI", role: "Backend Engineer Intern", hiringLink: "https://wellfound.com/jobs/3607637-backend-software-intern-remote", shortdescription: "",
   fulldescription:`
 As a Backend Software Intern at Cobalt, you will work closely with our experienced team of developers to design, develop and maintain robust and scalable backend applications using NodeJS and Typescript. You will gain hands-on experience in software development and be a part of a team that is passionate about creating innovative solutions.
 Design, develop and maintain backend applications using NodeJS and Typescript
@@ -264,46 +246,260 @@ Ability to work independently and as part of a team
 }
 
 , {
-  id: 15,
-  name: "Website developers India",
-  role: "Jr.React js developer",email: "hr@wdipl.com",
-  hiringLink: "https://www.wdipl.com/company/careers",
+  id: 15, name: "Website developers India", role: "Jr.React js developer",email: "hr@wdipl.com", hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.",
   fulldescription:`Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.
 `
 }, {
-  id: 15,
-  name: "Website developers India",
-  role: "Jr.Flutter developer",email: "hr@wdipl.com",
-  hiringLink: "https://www.wdipl.com/company/careers",
+  id: 15, name: "Website developers India", role: "Jr.Flutter developer",email: "hr@wdipl.com", hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS.",
   fulldescription:`Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS..
 `
 }
 , {
-  id: 15,
-  name: "Website developers India",
-  role: "Jr.Node js developer",email: "hr@wdipl.com",
-  hiringLink: "https://www.wdipl.com/company/careers",
+  id: 15, name: "Website developers India", role: "Jr.Node js developer",email: "hr@wdipl.com", hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.",
   fulldescription:`Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.
 `
 }, {
-  id: 15,
-  name: "Website developers India",
-  role: "Jr.Python developer",email: "hr@wdipl.com",
-  hiringLink: "https://www.wdipl.com/company/careers",
+  id: 15, name: "Website developers India", role: "Jr.Python developer",email: "hr@wdipl.com", hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.",
   fulldescription:`Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.
 `
 }, {
-  id: 16,
-  name: "Website developers India",
-  role: "Jr. Software Tester / QA Engineer developer",
-  email: "hr@wdipl.com",
-  hiringLink: "https://www.wdipl.com/company/careers",
-  shortdescription: "Create and execute manual and automated test plans to ensure quality, performance, and reliability of software applications.",
+  id: 16, name: "Website developers India", role: "Jr. Software Tester / QA Engineer developer", email: "hr@wdipl.com", hiringLink: "https://www.wdipl.com/company/careers", shortdescription: "Create and execute manual and automated test plans to ensure quality, performance, and reliability of software applications.",
   fulldescription:`Create and execute manual and automated test plans to ensure quality, performance, and reliability of software applications.
+`
+}
+, {
+  id: 17, name: "Softmed Technologies LLP", role: "Software Developer In-Office Job (full time)", hiringLink: "https://cuvette.tech/app/public/job/69310b5459e9146663fe3bdc?referralCode=4RIF3Q", shortdescription: "CSS, Angular, Python, MS SQL, PostgreSQL, Github, API, UI/UX, VS Code, XML",
+  fulldescription:`
+
+Design, develop, test, and deploy high-quality software applications.
+Write clean, scalable, and maintainable code using best practices.
+Implement new features based on functional and technical requirements.
+
+Collaborate with clients, stakeholders, and internal teams to gather requirements.
+Convert functional requirements into technical specifications and development tasks.
+
+Participate in designing the system architecture, database schemas, and workflow.
+Ensure security, performance, and scalability in all developed modules.
+
+Prepare and update technical documentation, API documentation, and deployment guides.
+Document code changes, module designs, and release notes.
+
+Work closely with UI/UX designers, QA engineers, DevOps, and product managers.
+Participate in daily stand-ups, sprint planning, and agile ceremonies.
+
+Provide ongoing support and enhancements for existing applications.
+Monitor system performance and optimize where necessary.
+Diagnose and fix bugs in a timely manner.
+
+Use Git or other version control systems for source code management.
+
+Stay up to date with emerging technologies, frameworks, and industry trends.
+Contribute ideas for improving processes, architecture, and system performance.
+Requirements
+
+
+Strong proficiency in C#, .NET, JavaScript, .NET Core, MS Sql, PostgreSql.
+Hands-on experience with modern frameworks and technologies like .NET Core, Angular/React, Node.js, SQL/NoSQL databases.
+Experience with REST APIs, microservices, and integration protocols.
+Familiarity with cloud platforms (AWS / Azure / GCP) is a plus.
+Practical experience in debugging, testing, and performance optimization.
+Good understanding of version control systems like Git.
+
+Commitment to writing clean, maintainable, and well-documented code.
+Understanding of secure coding practices.
+
+Ability to work effectively in a team as well as independently.
+Clear communication skills—both verbal and written.
+Openness to feedback and willingness to collaborate with cross-functional teams.
+
+Passion for continuous learning and keeping up with new technologies.
+Curiosity to explore new tools, frameworks, and methodologies.
+Willingness to adapt and quickly learn company-specific architectures and workflows.
+
+Strong sense of responsibility toward tasks and deadlines.
+Attention to detail and commitment to quality.
+Reliability, discipline, and positive work ethics.
+
+Contributions to open-source projects.
+Participation in hackathons or coding competitions.
+Personal projects or a strong GitHub portfolio.
+Certifications in relevant technologies.
+Experience with systems like PACS, EMR, imaging.
+`
+}, {
+  id: 18, name: "HighScores.ai", role: "QA Engineer Work From Home Internship", hiringLink: "https://cuvette.tech/app/public/internship/691ee8bd59e914666389b411?referralCode=4RIF3Q", shortdescription: "",
+  fulldescription:`
+Excellent aptitude
+Must be willing to join as full-time employee
+Knowledge of defect tracking tools such as Jira
+Must know one programming language (Java, Python or JavaScript)
+Database knowledge (Preferably MongoDB)
+Good understanding of web and mobile technologies
+Good communication skills
+Abilty to spend time late in the night to match the timing with the other team members
+Learn existing platform (LMS)
+Test code changes in each sprint (2 weeks sprint)
+Write test cases
+Work with other team members including development and product teams
+`
+}, {
+  id: 19, name: "BXI World LLP", role: "Fullstack Developer", hiringLink: "https://cuvette.tech/app/public/job/69302df859e9146663f79661?referralCode=4RIF3Q", shortdescription: "MongoDB, Javascript, React.js, NodeJs, Agile development,ExpressJs",
+  fulldescription:`
+Design, develop, and maintain robust and scalable web applications using the MERN stack
+Build reusable components and front-end libraries for future use
+Integrate RESTful APIs and third-party services
+Work with UI/UX designers to implement modern, user-friendly interfaces
+Optimize components for maximum performance across a vast array of web-capable devices and browsers
+Write clean, maintainable, and well-documented code
+Collaborate with product managers, designers, and other developers to deliver high-quality products
+Troubleshoot and debug application issues and ensure the security and performance of the application
+Strong proficiency in MongoDB, Express.js, React.js and Node.js
+Good understanding of JavaScript
+Experience with RESTful APIs and JSON
+Knowledge of Redux, React Hooks, and modern front-end workflows
+Familiarity with unit testing and debugging tools
+Excellent problem-solving skills and a keen attention to detail
+Familiarity with API testing tools like Postman or Swagger
+Understanding of basic DevOps processes and deployment pipelines
+`
+}, {
+  id: 20, name: "Isourse Technologies", role: "Network Engineer", hiringLink: "https://cuvette.tech/app/public/job/6931154f59e9146663feaa2c?referralCode=4RIF3Q", shortdescription: "Adaptability, ,Troubleshooting ,Client Communication ,Networking ,Problem Solving",
+  fulldescription:`
+
+Act as the initial technical support contact for users and customers, providing a crucial link between them and the IT department.
+Problem Diagnosis & Resolution:
+Identify, diagnose, and resolve technical issues related to computer hardware, software, networks, and operating systems.
+
+Provide clear, step-by-step guidance to users over the phone, chat, or email to help them resolve technical difficulties.
+
+Log all user queries and issues, track their status, and escalate unresolved problems to the appropriate higher-level IT support teams.
+
+Create and maintain documentation, including standard operating procedures (SOPs), to build an internal knowledge base for resolving common issues.
+
+Ensure a high level of customer satisfaction by responding patiently to inquiries and providing exceptional support.
+
+Work closely with other members of the IT department to coordinate efforts and find optimal solutions for users.
+Essential Skills and Qualifications
+
+Strong understanding of computer hardware, software, operating systems, and networking fundamentals.
+Problem-Solving & Analytical Skills:
+Ability to analyse complex technical issues, break them down, and develop effective solutions.
+
+Excellent verbal and written communication skills, including the ability to explain technical concepts in a way that is easy for non-technical users to understand.
+
+A patient, friendly, and customer-focused demeanour, with a genuine commitment to helping others.
+
+Experience with service management tools for tracking, managing, and resolving IT incidents and requests.
+`
+}, {
+  id: 21, name: "InLabels", role: "Frontend Developer ", hiringLink: "https://cuvette.tech/app/public/internship/6931804459e914666302b82a?referralCode=4RIF3Q", shortdescription: "Svelte, Javascript, Typescript",
+  fulldescription:`
+▸ Strong expertise in Svelte, or ability to learn Svelte within a week
+▸ Projects built with Svelte / Browser Extensions
+`
+}, {
+  id: 22,
+  name: "Skynetic Ventures",
+  role: "Fullstack Developer",
+  hiringLink: "https://cuvette.tech/app/public/internship/6931417559e9146663006432?referralCode=4RIF3Q",
+  shortdescription: "Python, Flask, React.js, MongoDB, PostgreSQL, Tailwind, HTML, CSS",
+  fulldescription:`
+Collaborating with the team to design, develop, and implement new features for the platform
+Building AI integrations using OpenAI's API, in addition to other large language models
+Writing efficient, scalable code using Python
+Enhancing the user interface using ReactJS to create a seamless user experience
+Managing and optimizing database queries in MongoDB to ensure optimal performance
+Conducting thorough testing and debugging to ensure high-quality software
+Staying up-to-date on industry trends and best practices in full-stack development
+Taking ownership of projects and contributing innovative solutions to drive company growth
+`
+}, {
+  id: 23,
+  name: "Cyntexa",
+  role: "Associate Software Developer",
+  hiringLink: "https://cyntexa.com/careers/associate-software-developer/",
+  shortdescription: "As an Associate Software Developer, you will be part of a dynamic development team working in cutting-edge technologies such as Salesforce, ServiceNow, and other related platforms that are transforming the IT industry.",
+  fulldescription:`
+As an Associate Software Developer, you will be part of a dynamic development team working in cutting-edge technologies such as Salesforce, ServiceNow, and other related platforms that are transforming the IT industry.
+You will be involved in various phases of the software development life cycle, including designing, developing, and maintaining high-quality and scalable applications to serve business needs.
+Candidates who are new to Salesforce or ServiceNow can also apply, as we provide extensive hands-on training on these and other related technologies for the initial 6 months, to help every candidate build a strong technical foundation.
+We are seeking an Associate Software Developer with strong logical skills, analytical capabilities, and a hunger to learn. Basic coding knowledge or experience in any programming language is a prerequisite for applying to this job.
+If you have the right skills and the right amount of passion for learning and growing in your career, then you are the one who can be the next team member of our amazing team at Cyntexa.
+Bachelor’s degree in Computer Science, Software Engineering, or a related field.
+Solid understanding of software development principles and methodologies.
+Proficiency in at least one programming language (e.g., Java, C, C++, Python) and willingness to learn new technologies.
+Familiarity with software development tools (e.g., IDEs, version control systems) and software testing frameworks. – Good to have
+Prior experience or internships in software development is a plus.
+Develop, implement, and maintain new software/applications using industry best practices.
+Conduct thorough testing and debugging of software applications to ensure high quality and performance.
+Collaborate with senior developers to understand software requirements and develop technical specifications.
+Participate in code reviews to provide and receive constructive feedback to improve overall code quality.
+Stay updated with emerging technologies and industry trends to contribute innovative ideas to the team.
+Document software designs, processes, and procedures to facilitate knowledge sharing and future maintenance.
+Assist in the integration of software components and third-party libraries.
+Support the deployment and maintenance of software applications in production environments.
+Positive Attitude
+Quick Learner
+Strong attention to detail
+Plays well within a team
+Strategic and Analytical Thinking
+Passionate & Dedicated
+Time-management skills
+Communication Skills
+Contribute innovative ideas to the team
+`
+}, {
+  id: 24,
+  name: "Quadeye",
+  role: "Operations Engineer",
+  hiringLink: "https://www.quadeye.com/careers/?gh_jid=8294333002",
+  shortdescription: "We are looking to hire Software Developer-Python having 0- 2 years of work experience to work with our product team for Quadeye’s High-Frequency Trading environment.",
+  fulldescription:`
+Understanding the problems and issues related to the smooth operations of our processes and software.
+Coming up with good engineering solutions for problems.
+Implementing the code for creating and modifying the software.
+Testing the code written thoroughly.
+Deploying the code in production.
+Overviewing the code in production and resolving the arising issues.
+Engineering degree in Computer Science (preferred) or any other discipline
+Ability to work in a fast-paced environment managing multiple high-priority projects.
+Working with Python and bash on a regular basis
+Advantageous if the candidate has familiarity with pandas/NumPy.
+Strong Knowledge of Shell and Python scripting
+Working knowledge of Linux
+Excellent problem-solving abilities
+Good written and oral communication skills
+Willingness to learn and work on new technologies.
+`
+}, {
+  id: 25,
+  name: "Deltek",
+  role: "Associate Software Engineer ",
+  hiringLink: "https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25397&siteid=5259&PageType=JobDetails&jobid=621963",
+  shortdescription: "",
+  fulldescription:`
+Undertake analysis, design, coding and testing activities of modules
+Develop software on time and to required quality standards
+Support the company's development processes and development guidelines including code reviews, coding style and unit testing requirements.
+Assist in designing and implementing solutions that leverage AI agents, source code repositories, and knowledge bases to automate case resolution and code remediation.
+Work closely with senior engineers, actively participate in team discussions, and seek mentorship to accelerate your learning.
+Approaches every challenge by asking, “How can AI transform this?”
+Sees GenAI and LLMs as core building blocks for designing smarter, adaptive systems.
+Experiments with prompt engineering, AI coding assistants (e.g., Claude, ChatGPT, GitHub Copilot), and agent-based frameworks to amplify creativity and accelerate learning.
+Curious about emerging AI technologies and how they can reshape workflows, not just improve them.
+Solid understanding of object-oriented programming principles and design patterns.
+Working knowledge of C#/.NET or Java
+Exposure to relational databases (SQL Server or Oracle) and basic SQL concepts/operations.
+Understanding of version control (Git) and CI/CD concepts.
+Awareness of core software engineering principles such as OOP, SOLID, and testing.
+A learning mindset: eager to grow under mentorship from senior engineers.
+A collaborative communicator who values feedback and team success.
+Demonstrated problem-solving ability with attention to quality and detail.
+Enthusiasm for experimenting, iterating, and building AI-enabled solutions that go beyond efficiency to transformation.
 `
 }
 ];
