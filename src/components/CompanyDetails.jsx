@@ -2,10 +2,7 @@ import Sidebar from './Sidebar';
 import { companiesData } from '../data/JobData';
 
 function CompanyDetails({ company, onBack, onCompanyClick }) {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [company]);
+  
   if (!company) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
