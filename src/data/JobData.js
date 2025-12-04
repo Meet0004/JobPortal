@@ -266,7 +266,7 @@ Ability to work independently and as part of a team
 , {
   id: 15,
   name: "Website developers India",
-  role: "Jr.React js developer",
+  role: "Jr.React js developer",email: "hr@wdipl.com",
   hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.",
   fulldescription:`Develop responsive and interactive web user interfaces using React.js, TypeScript, and modern JavaScript tools.
@@ -274,7 +274,7 @@ Ability to work independently and as part of a team
 }, {
   id: 15,
   name: "Website developers India",
-  role: "Jr.Flutter developer",
+  role: "Jr.Flutter developer",email: "hr@wdipl.com",
   hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS.",
   fulldescription:`Build cross-platform mobile applications using Flutter and Dart for seamless performance across Android and iOS..
@@ -283,7 +283,7 @@ Ability to work independently and as part of a team
 , {
   id: 15,
   name: "Website developers India",
-  role: "Jr.Node js developer",
+  role: "Jr.Node js developer",email: "hr@wdipl.com",
   hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.",
   fulldescription:`Design and implement backend services and RESTful APIs using Node.js, Express, and modern JavaScript/TypeScript.
@@ -291,10 +291,19 @@ Ability to work independently and as part of a team
 }, {
   id: 15,
   name: "Website developers India",
-  role: "Jr.Python developer",
+  role: "Jr.Python developer",email: "hr@wdipl.com",
   hiringLink: "https://www.wdipl.com/company/careers",
   shortdescription: "Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.",
   fulldescription:`Develop server-side applications, automation scripts, and data-driven systems using Python and relevant frameworks like Django or Flask.
+`
+}, {
+  id: 16,
+  name: "Website developers India",
+  role: "Jr. Software Tester / QA Engineer developer",
+  email: "hr@wdipl.com",
+  hiringLink: "https://www.wdipl.com/company/careers",
+  shortdescription: "Create and execute manual and automated test plans to ensure quality, performance, and reliability of software applications.",
+  fulldescription:`Create and execute manual and automated test plans to ensure quality, performance, and reliability of software applications.
 `
 }
 ];
