@@ -9,8 +9,10 @@ import oracle from "../assets/40oracle.png";
 import tips from "../assets/100resumetips.png";
 import coding from "../assets/basicCodingQues.png";
 import js from "../assets/JScheatsheetExplain.png";
+import react from "../assets/react.png"
 
 export const resourcesData = [
+  
   {
     id:0, title:"39 Basic Coding Ques + Code",
     description:"",
@@ -23,6 +25,13 @@ export const resourcesData = [
     price:"Free",
     link:"https://topmate.io/meet_g/1827280",
     image: js
+  },
+  {
+    id:13, title:"React.js 0 to Interview complete guide 130+pages pdf",
+    description:"",
+    price:"₹19",
+    link:"https://topmate.io/meet_g/1837517",
+    image: react
   },
   {
     id:11, title:"40 Javascript Interview Questions + Detailed Answers",
