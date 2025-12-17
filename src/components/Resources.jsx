@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { resourcesData } from '../data/ResourceData';
+import ResourcesData from '../data/ResourceData';
 import { placeholderWords } from '../data/searchBarData';
 import booksIcon from "../assets/svg/books.svg";
 function Resources() {
@@ -37,7 +37,7 @@ function Resources() {
     return () => clearTimeout(timer);
   }, [placeholder, isDeleting, wordIndex]);
 
-  const filteredResources = resourcesData.filter(resource => {
+  const filteredResources = ResourcesData.filter(resource => {
     const query = searchQuery.toLowerCase();
     return (
       resource.title.toLowerCase().includes(query) ||

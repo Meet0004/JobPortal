@@ -1,20 +1,11 @@
-import sql from "../../assets/sql.png";
-import sqlcheatsheets from "../../assets/sql3.png";
-import oops from "../../assets/oops.png";
-import dsa from "../../assets/15com.png";
-import interview from "../../assets/200interview.png";
-import m200 from "../../assets/200mails.png";
-import m2000 from "../../assets/2000emails.png";
-import oracle from "../../assets/40oracle.png";
-import tips from "../../assets/100resumetips.png";
-import coding from "../../assets/basicCodingQues.png";
+
 export const resourcesData = [
 	{
 		id:0, title:"39 Basic Coding Ques + Code",
 		description:"",
 		price:"Free",
 		link:"https://topmate.io/meet_g/1812777",
-		image: coding
+
 	  },
 	 {
 	id: 9,
@@ -22,21 +13,21 @@ export const resourcesData = [
 	description: "",
 	price: "₹9",
 	link: "https://topmate.io/meet_g/1809459",
-	image: tips
+
   },{
 	id: 4,
 	title: "15+ Companies Wise DSA Questions",
 	description: "",
 	price: "₹49",
 	link: "https://topmate.io/meet_g/1809468",
-	image: dsa
+
   },{
 	id: 6,
 	title: "2000+ Famous IT Companies HR Emails",
 	description: "",
 	price: "₹49",
 	link: "https://topmate.io/meet_g/1809461",
-	image: m2000
+
   },
   {
 	id: 2,
@@ -44,7 +35,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹29",
 	link: "https://topmate.io/meet_g/1809042",
-	image: sqlcheatsheets
+
   },
   {
 	id: 1,
@@ -52,7 +43,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹9",
 	link: "https://topmate.io/meet_g/1809053",
-	image: sql
+
   },
   
   {
@@ -61,7 +52,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹9",
 	link: "https://topmate.io/meet_g/1809055",
-	image: oops
+
   },
   
   {
@@ -70,7 +61,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹29",
 	link: "https://topmate.io/meet_g/1809466",
-	image: interview
+
   },
   
   {
@@ -79,7 +70,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹9",
 	link: "https://topmate.io/meet_g/1809466",
-	image: m200
+
   },
   {
 	id: 8,
@@ -87,7 +78,7 @@ export const resourcesData = [
 	description: "",
 	price: "₹29",
 	link: "https://topmate.io/meet_g/1809457",
-	image: oracle
+
   },
  
 ];
