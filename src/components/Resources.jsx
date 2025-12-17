@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import ResourcesData from '../data/ResourceData';
 import { placeholderWords } from '../data/searchBarData';
 import booksIcon from "../assets/svg/books.svg";
+
 function Resources() {
   const [searchQuery, setSearchQuery] = useState('');
   const [placeholder, setPlaceholder] = useState('');
@@ -16,15 +17,12 @@ function Resources() {
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
-        // Typing mode
         if (placeholder.length < currentWord.length) {
           setPlaceholder(currentWord.slice(0, placeholder.length + 1));
         } else {
-          // Pause before deleting
           setTimeout(() => setIsDeleting(true), pauseTime);
         }
       } else {
-        // Deleting mode
         if (placeholder.length > 0) {
           setPlaceholder(placeholder.slice(0, -1));
         } else {
@@ -48,7 +46,8 @@ function Resources() {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-2xl font-semibold text-amber-600 mb-6 flex items-center">
-        <img src={booksIcon} className="inline w-7 h-7" /> Resources (Interview Tips and Complete Guide)
+        <img src={booksIcon} className="inline w-7 h-7 mr-2" alt="Books" />
+        Resources (Interview Tips and Complete Guide)
       </h3>
 
       {/* Search Box */}
@@ -56,7 +55,7 @@ function Resources() {
         <div className="relative">
           <input
             type="text"
-            placeholder={`${placeholder}`}
+            placeholder={placeholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-4 py-3 pl-11 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
@@ -86,68 +85,121 @@ function Resources() {
         )}
       </div>
 
-      {/* Resources List */}
-      <div className="space-y-4">
-        {filteredResources.length > 0 ? (
-          filteredResources.map(resource => (
-            <div
-              key={resource.id}
-              className="flex items-center gap-4 p-4 bg-amber-50 hover:bg-amber-100 rounded-lg transition-colors border border-amber-200"
-            >
-              {/* Image */}
-              <div className="flex-shrink-0">
+      {/* Mobile List + Desktop Grid */}
+      {filteredResources.length > 0 ? (
+        <>
+          {/* MOBILE LIST */}
+          <div className="space-y-4 lg:hidden">
+            {filteredResources.map(resource => (
+              <div
+                key={resource.id}
+                className="flex items-center gap-4 p-4 bg-amber-50 hover:bg-amber-100 rounded-lg border border-amber-200"
+              >
                 <img
                   src={resource.image}
                   alt={resource.title}
                   className="w-24 h-24 object-cover rounded-lg"
                 />
-              </div>
 
-              {/* Title & Description */}
-              <div className="flex-grow">
-                <h4 className="font-semibold text-lg text-gray-800 mb-1">
-                  {resource.title}
-                </h4>
-                <p className="text-sm text-gray-600 line-clamp-2">
-                  {resource.description}
-                </p>
-              </div>
+                <div className="flex-grow">
+                  <h4 className="font-semibold text-lg text-gray-800 mb-1">
+                    {resource.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {resource.description}
+                  </p>
+                </div>
 
-              {/* Price + Link */}
-              <div className="flex-shrink-0 flex flex-col items-end gap-2">
-                <span className="text-xl font-bold text-amber-600">
-                  {resource.price}
-                </span>
+                <div className="flex flex-col items-end gap-2">
+                  <span className="text-lg font-bold text-amber-600">
+                    {resource.price}
+                  </span>
 
-                <a
-                  href={resource.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-amber-500 hover:bg-amber-600 rounded-full transition-colors"
-                  title="View Resource"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+                  <a
+                    href={resource.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-amber-500 hover:bg-amber-600 rounded-full transition-colors"
+                    title="View Resource"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <div className="text-center py-8 text-gray-500">
-            No resources found matching "{searchQuery}"
+            ))}
           </div>
-        )}
-      </div>
+
+          {/* DESKTOP GRID */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+            {filteredResources.map(resource => (
+              <div
+                key={resource.id}
+                className="flex flex-col bg-amber-50 hover:bg-amber-100 rounded-lg border border-amber-200 overflow-hidden shadow-sm hover:shadow-md"
+              >
+                <div className="w-full aspect-square bg-gray-100">
+                  <img
+                    src={resource.image}
+                    alt={resource.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <div className="p-4 flex flex-col flex-grow">
+                  <h4 className="font-semibold text-base text-gray-800 mb-2 line-clamp-2 min-h-[3rem]">
+                    {resource.title}
+                  </h4>
+
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
+                    {resource.description}
+                  </p>
+
+                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-amber-200">
+                    <span className="text-lg font-bold text-amber-600">
+                      {resource.price}
+                    </span>
+
+                    <a
+                      href={resource.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-amber-500 hover:bg-amber-600 rounded-full transition-colors"
+                      title="View Resource"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-white"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="text-center py-8 text-gray-500">
+          No resources found matching "{searchQuery}"
+        </div>
+      )}
     </div>
   );
 }
